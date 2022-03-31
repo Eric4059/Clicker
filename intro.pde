@@ -7,6 +7,10 @@ void intro() {
   rect(300, 500, 200, 80);
   fill(0);
   text("Start", 400, 530);
+  
+  //title
+  fill(255);
+  text("Clicker Game", 400, 250);
 }
 
 void introClicks() {

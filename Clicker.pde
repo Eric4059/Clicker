@@ -1,11 +1,16 @@
+
+//MODE VARIABLES
+
 int mode;
 final int INTRO = 0;
 final int GAME = 1;
 final int PAUSE = 2;
 final int GAMEOVER = 3;
 
+//TARGERT VARIABLES
+float x, y, d; 
 
-
+//COLOR PALETTE 
 void setup() {
   size(800, 800);
   mode = INTRO;
