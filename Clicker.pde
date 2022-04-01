@@ -1,4 +1,5 @@
 
+
 //MODE VARIABLES
 
 int mode;
@@ -9,6 +10,10 @@ final int GAMEOVER = 3;
 
 //TARGERT VARIABLES
 float x, y, d; 
+float vx;
+float vy;
+
+PImage ball;
 
 //COLOR PALETTE 
 void setup() {
@@ -17,6 +22,18 @@ void setup() {
   textAlign(CENTER, CENTER);
   textSize(60);
   strokeWeight(5);
+  
+  
+  //target Initialization
+  x = 400;
+  y = 400;
+  d = 100;
+  vx = 7;
+  vy = -5;
+  
+  //target img
+  ball = loadImage("blah.png");
+  imageMode(CENTER);
 }
 
 
