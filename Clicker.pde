@@ -14,6 +14,10 @@ float vx;
 float vy;
 
 PImage ball;
+PImage home;
+
+int score;
+int lives;
 
 //COLOR PALETTE 
 void setup() {
@@ -22,18 +26,22 @@ void setup() {
   textAlign(CENTER, CENTER);
   textSize(60);
   strokeWeight(5);
-  
-  
+
+
   //target Initialization
   x = 400;
   y = 400;
   d = 100;
-  vx = 7;
-  vy = -5;
-  
+  vx = 3.3;
+  vy = -1.4;
+  score = 0;
+  lives = 3;
+
   //target img
   ball = loadImage("blah.png");
   imageMode(CENTER);
+
+  home = loadImage("home.png");
 }
 
 
@@ -55,12 +63,20 @@ void draw() {
 
 
 
-void tactileRect(int x, int y, int w, int l){
-if (mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+l) {
+void tactileRect(int x, int y, int w, int l) {
+  if (mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+l) {
     stroke(255);
   } else {
     stroke(0);
   }
+}
 
 
+
+void tactileCircle(int X, int Y, int r) {
+  if (dist(mouseX, mouseY, X, Y) < r) {
+    stroke(255);
+  } else {
+    stroke(0);
+  }
 }

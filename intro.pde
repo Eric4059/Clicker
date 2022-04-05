@@ -10,7 +10,7 @@ void intro() {
   
   //title
   fill(255);
-  text("Clicker Game", 400, 250);
+  text("Whack-A-Ball", 400, 250);
 }
 
 void introClicks() {
