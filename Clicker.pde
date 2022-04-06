@@ -1,5 +1,3 @@
-
-
 //MODE VARIABLES
 
 int mode;
@@ -15,6 +13,7 @@ float vy;
 
 PImage ball;
 PImage home;
+PImage racket;
 
 int score;
 int lives;
@@ -42,17 +41,23 @@ void setup() {
   imageMode(CENTER);
 
   home = loadImage("home.png");
+  
+  racket = loadImage("racket.png");
 }
 
 
 void draw() {
   if (mode == INTRO) {
+    cursor();
     intro();
   } else if (mode == GAME) {
+    noCursor();
     game();
   } else if (mode == PAUSE) {
+    cursor();
     pause();
   } else if (mode == GAMEOVER) {
+    cursor();
     gameover();
   } else {
 

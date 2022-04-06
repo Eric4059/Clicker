@@ -1,4 +1,5 @@
 void game() {
+  textSize(60);
   //backgorund
   background(#A9D1AD);
   
@@ -7,6 +8,7 @@ void game() {
   
   text("Score: " + score, width/5, 80);
   text("Lives: " + lives, width/5 - 10, 140);
+  
   
   
   //targetboundaries
@@ -33,16 +35,25 @@ void game() {
      vy = vy * -1;
   
   }
+  
+  
+  //pause
+  
+  square(700, 100, 50);
+  
+  //cursor
+  
+  image(racket, mouseX, mouseY+80, 300, 300);
 }
 
 
 void gameClicks() {
   
-  if(dist(mouseX, mouseY, x, y) < 50){
+  if(dist(mouseX, mouseY, x, y) < 75){
   score = score + 1;
   vx = vx * 1.1;
   vy = vy * 1.1;
-  } else {
+  } else if (mouseX > 50 && mouseX < 750 && mouseY > 250 && mouseY < 750){
   lives = lives - 1;
   
   if(lives == 0){

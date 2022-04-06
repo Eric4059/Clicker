@@ -23,7 +23,6 @@ void gameover() {
 void gameoverClicks() {
 
   if ( mouseX > 300 && mouseX < 500 && mouseY > 500 && mouseY < 580 ) {
-    println("wajondvaudjjda");
     mode = GAME;
     lives = 3;
     score = 0;

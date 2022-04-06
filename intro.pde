@@ -6,10 +6,12 @@ void intro() {
   fill(255);
   rect(300, 500, 200, 80);
   fill(0);
+  textSize(60);
   text("Start", 400, 530);
   
   //title
   fill(255);
+  textSize(90);
   text("Whack-A-Ball", 400, 250);
 }
 
