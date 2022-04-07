@@ -14,6 +14,7 @@ float vy;
 PImage ball;
 PImage home;
 PImage racket;
+PImage start;
 
 int score;
 int lives;
@@ -43,21 +44,19 @@ void setup() {
   home = loadImage("home.png");
   
   racket = loadImage("racket.png");
+  
+  start =  loadImage("start.png");
 }
 
 
 void draw() {
   if (mode == INTRO) {
-    cursor();
     intro();
   } else if (mode == GAME) {
-    noCursor();
     game();
   } else if (mode == PAUSE) {
-    cursor();
     pause();
   } else if (mode == GAMEOVER) {
-    cursor();
     gameover();
   } else {
 
