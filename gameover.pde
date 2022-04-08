@@ -1,7 +1,7 @@
 void gameover() {
   background(#A9D1AD);
-  textSize(60);
-  text("GAME OVER", width/2, width/3);
+  textSize(100);
+  text("GAME OVER", 400, 220);
 
   //restart
   tactileRect(300, 500, 200, 80);
@@ -17,6 +17,9 @@ void gameover() {
   tactileCircle(80, 80, 40);
   circle(80, 80, 80);
   image(home, 80, 77, 60, 60);
+  
+  //highscore
+  text("High Score: " + highscore, 400, 380);
 }
 
 

@@ -18,11 +18,12 @@ PImage start;
 
 int score;
 int lives;
+int highscore;
 
 //COLOR PALETTE 
 void setup() {
   size(800, 800);
-  mode = INTRO;
+  mode = GAMEOVER;
   textAlign(CENTER, CENTER);
   textSize(60);
   strokeWeight(5);

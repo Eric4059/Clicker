@@ -55,7 +55,7 @@ void game() {
 
 void gameClicks() {
 
-  if (dist(mouseX, mouseY, x, y) < 75) {
+  if (dist(mouseX, mouseY, x, y) < 125) {
     score = score + 1;
     vx = vx * 1.1;
     vy = vy * 1.1;
@@ -65,6 +65,7 @@ void gameClicks() {
     if (lives == 0) {
       cursor();
       mode = GAMEOVER;
+      highscore = max(highscore, score);
     }
   }
 
