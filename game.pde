@@ -3,6 +3,11 @@ void game() {
   //backgorund
   background(#A9D1AD);
 
+  if (lives == 0) {
+    cursor();
+    mode = GAMEOVER;
+    highscore = max(highscore, score);
+  }
 
   //score & lives
   fill(0);
@@ -46,6 +51,7 @@ void game() {
   //pause
   fill(255);
   stroke(#87B494);
+  tactileRect(700, 120, 50, 50);
   square(700, 120, 50);
   image(start, 725, 145, 30, 30);
 
@@ -61,18 +67,13 @@ void gameClicks() {
     vy = vy * 1.1;
   } else if (mouseX > 50 && mouseX < 750 && mouseY > 250 && mouseY < 750) {
     lives = lives - 1;
-
-    if (lives == 0) {
-      cursor();
-      mode = GAMEOVER;
-      highscore = max(highscore, score);
-    }
   }
 
   if (mouseX > 700 && mouseX < 750 && mouseY > 120 && mouseY < 170) {
     start = loadImage("pause.png");
+    mode = PAUSE;
   } else {
     start = loadImage("start.png");
-  
+    mode = GAME;
   }
 }

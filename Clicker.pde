@@ -5,6 +5,7 @@ final int INTRO = 0;
 final int GAME = 1;
 final int PAUSE = 2;
 final int GAMEOVER = 3;
+final int OPTIONS = 4;
 
 //TARGERT VARIABLES
 float x, y, d; 
@@ -15,6 +16,7 @@ PImage ball;
 PImage home;
 PImage racket;
 PImage start;
+PImage options;
 
 int score;
 int lives;
@@ -23,7 +25,7 @@ int highscore;
 //COLOR PALETTE 
 void setup() {
   size(800, 800);
-  mode = GAMEOVER;
+  mode = INTRO;
   textAlign(CENTER, CENTER);
   textSize(60);
   strokeWeight(5);
@@ -47,6 +49,8 @@ void setup() {
   racket = loadImage("racket.png");
   
   start =  loadImage("start.png");
+  
+  options = loadImage("options.png");
 }
 
 
@@ -59,6 +63,8 @@ void draw() {
     pause();
   } else if (mode == GAMEOVER) {
     gameover();
+  } else if (mode == OPTIONS){
+    options();
   } else {
 
     println("Error: Mode = " + mode);
