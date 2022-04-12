@@ -26,7 +26,7 @@ void game() {
   strokeWeight(5);
   stroke(255);
   fill(0);
-  image(ball, x, y, 100, 100);
+  image(chosenTarget, x, y, 10+(width/sliderX)*20, 10+(width/sliderX)*20);
 
   //movement
   x = x + vx;
@@ -61,7 +61,7 @@ void game() {
 
 void gameClicks() {
 
-  if (dist(mouseX, mouseY, x, y) < 125) {
+  if (dist(mouseX, mouseY, x, y) < 25+(width/sliderX)*20) {
     score = score + 1;
     vx = vx * 1.1;
     vy = vy * 1.1;

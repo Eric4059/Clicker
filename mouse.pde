@@ -10,4 +10,10 @@ void mouseReleased() {
   } else if (mode == OPTIONS) {
     optionsClicks();
   }
+  
+  controlSlider();
+}
+
+void mouseDragged() {
+  controlSlider();
 }
