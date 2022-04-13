@@ -34,11 +34,11 @@ void game() {
 
   //bouncing
   if (x < 100 || x > 700) {
-    vx = vx * -1;
+    vx = -vx;
   }
 
   if (y < 290 || y > 710) {
-    vy = vy * -1;
+    vy = -vy;
   }
 
   if (mouseX > 50 && mouseX < 750 && mouseY > 250 && mouseY < 750) {

@@ -27,6 +27,14 @@ void options() {
   
   //showing
   image(chosenTarget, 585, 545, 10+(width/sliderX)*20, 10+(width/sliderX)*20); 
+  
+  //back button
+  fill(255);
+  tactileRect(40, 40, 100, 50);
+  rect(40, 40, 100, 50);
+  fill(0);
+  textSize(40);
+  text("Back", 90, 60);
 }
 
 
@@ -39,6 +47,10 @@ void optionsClicks() {
   }
   if (mouseX > 300 && mouseX < 500 && mouseY > 650 && mouseY < 730) {
     mode = GAME;
+  }
+  if(mouseX > 40 && mouseX < 140 && mouseY > 40 && mouseY < 90){
+    mode = INTRO;
+  
   }
 }
 
