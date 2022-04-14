@@ -40,8 +40,8 @@ void setup() {
   x = 400;
   y = 400;
   d = 100;
-  vx = 3.3;
-  vy = -1.4;
+  vx = random(1, 5);
+  vy = random(1, 5);
   score = 0;
   lives = 3;
   sliderX = 215;

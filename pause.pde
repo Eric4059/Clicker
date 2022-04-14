@@ -23,6 +23,9 @@ void pauseClicks() {
   
   if(mouseX > 550 && mouseX < 650 && mouseY > 120 && mouseY < 170){
   mode = INTRO;
+  score = 0;
+  lives = 3;
+  start =  loadImage("pause.png");
   
   }
 }
