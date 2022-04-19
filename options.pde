@@ -22,6 +22,7 @@ void options() {
 
   //slider
   //tactileCircle(sliderX, 545, )
+  stroke(0);
   line(100, 545, 330, 545);
   circle(sliderX, 545, 20);
   

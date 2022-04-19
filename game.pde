@@ -33,11 +33,12 @@ void game() {
   y = y + vy;
 
   //bouncing
-  if (x < 100 || x > 700) {
+  circle(x, y, 5);
+  if (x-(10+(width/sliderX)*10) < 50 || x+(10+(width/sliderX)*10) > 750) {
     vx = -vx;
   }
 
-  if (y < 290 || y > 710) {
+  if (y-(10+(width/sliderX)*10) < 250 || y+(10+(width/sliderX)*10) > 750) {
     vy = -vy;
   }
 
