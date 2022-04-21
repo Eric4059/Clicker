@@ -1,3 +1,10 @@
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
 //MODE VARIABLES
 
 int mode;
@@ -12,6 +19,13 @@ float x, y, d;
 float vx;
 float vy;
 float sliderX;
+
+
+//sound variables
+Minim minim;
+AudioPlayer intro, hit, gameover;
+
+
 
 
 PImage chosenTarget;
@@ -62,6 +76,11 @@ void setup() {
   bowling = loadImage("bowling.png");
   
   chosenTarget = ball;
+  
+  //sound
+  minim = new Minim(this);
+  
+  hit = minim.loadFile("hit.mp3");
 }
 
 

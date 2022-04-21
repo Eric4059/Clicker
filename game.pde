@@ -66,6 +66,8 @@ void gameClicks() {
     score = score + 1;
     vx = vx * 1.1;
     vy = vy * 1.1;
+    hit.rewind();
+    hit.play();
   } else if (mouseX > 50 && mouseX < 750 && mouseY > 250 && mouseY < 750) {
     lives = lives - 1;
   }
